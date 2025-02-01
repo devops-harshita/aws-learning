@@ -1,8 +1,8 @@
 resource "aws_s3_bucket" "harshita-bucket" {
-  bucket = "harshita.com"
+  bucket = var.name
 
   tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
+    Name        = var.name
+    Environment = var.environment
   }
 }
