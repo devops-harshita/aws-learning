@@ -2,10 +2,10 @@ provider "aws" {
   region     = "us-west-2"
 }
 
-module "ec2"{
-  source = "./modules/ec2"
-  name = "harshita-ec2"
-}
+# module "ec2"{
+#   source = "./modules/ec2"
+#   name = "harshita-ec2"
+# }
 
 
 # module "s3"{
@@ -47,3 +47,9 @@ module "ec2"{
 #     Environment = "dev"
 #   }
 # }
+
+resource "null_resource" "example" {
+  provisioner "local-exec" {
+    command = "echo 'Hello, Terraform!'"
+  }
+}
